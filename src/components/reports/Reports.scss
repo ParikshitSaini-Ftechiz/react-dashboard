@@ -1,0 +1,42 @@
+@import "../../index.scss";
+
+.card {
+    &.card_bg {
+        background-image: url("../../assets/images/backPattern.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 3.5px 5.5px;
+
+    .cardData {
+        @include itemPosition(normal, space-between);
+        flex-direction: column;
+        gap: 15px;
+        color: $light;
+        height: 180px;
+
+        .icon {
+            @include squareShape(40px, 40px, $light, 5px);
+        }
+
+        .tools {
+            @include itemPosition(flex-end, space-between);
+            gap: 10px;
+
+        }
+    }
+
+}
+
+.progressBox {
+    background-color: $light;
+    padding: 15px 0;
+    border-radius: 15px;
+
+    p {
+        color: $mediumText;
+    }
+}
